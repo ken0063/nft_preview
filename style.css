@@ -128,7 +128,7 @@ table {
   border-spacing: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap'); */
 
 :root {
   --softBlue: hsl(215, 51%, 70%);
@@ -148,6 +148,9 @@ table {
 
 html,
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Outfit', sans-serif;
   color: var(--softBlue);
   background-color: var(--mainBg);
@@ -160,6 +163,8 @@ body {
 }
 
 main {
+  width: 80%;
+  font-family: 'Outfit', sans-serif;
   margin: 60px 25px;
   padding: 25px;
   background-color: var(--cardBg);
@@ -274,4 +279,16 @@ hr {
 
 .footer:hover a {
   color: var(--cyan);
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main {
+    width: 20%;
+  }
 }
