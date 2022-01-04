@@ -140,27 +140,138 @@ table {
   --fontSize: 18px;
   --thin: 300;
   --normal: 400;
-  --bnold: 600;
+  --bold: 600;
+  --borderRadius: 20px;
+  --heading: 25px;
+  --rounded: 50%;
 }
 
 html,
 body {
   font-family: 'Outfit', sans-serif;
-  color: var(--text3);
-}
-
-html,
-body,
-button,
-input,
-textarea,
-select {
-  font-family: 'Outfit', sans-serif;
-  font-size: var(--fontSize);
+  color: var(--softBlue);
+  background-color: var(--mainBg);
+  width: 100%;
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 30px;
+  font-size: var(--fontSize);
 }
 
-* {
-  box-sizing: border-box;
+main {
+  margin: 60px 25px;
+  padding: 25px;
+  background-color: var(--cardBg);
+  border-radius: var(--borderRadius);
+}
+
+a {
+  color: var(--white);
+  font-size: var(--fontSize);
+  text-decoration: none;
+}
+
+.card_image {
+  position: relative;
+  width: 100%;
+}
+
+.card_image img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 275px;
+  border-radius: var(--borderRadius);
+  transition: 5ms ease;
+  backface-visibility: hidden;
+}
+
+.card_image .middle img {
+  width: 60px;
+  height: 60px;
+  transition: 5ms ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.card_image:hover {
+  opacity: 0.3;
+  background-image: var(--cyan);
+  cursor: pointer;
+}
+
+.card_image:hover .middle img {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.heading {
+  margin: 30px 0 15px 0;
+  font-weight: var(--bold);
+  font-size: var(--heading);
+}
+
+.heading a {
+  text-decoration: none;
+}
+
+.heading:hover a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.info div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--bold);
+}
+
+.info div img {
+  margin-right: 10px;
+}
+
+.eth_color {
+  color: var(--cyan);
+}
+
+hr {
+  border: 1px solid var(--line);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.footer img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--white);
+  border-radius: var(--rounded);
+}
+
+.footer p {
+  margin-left: 15px;
+}
+
+.footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer:hover a {
+  color: var(--cyan);
 }
