@@ -189,7 +189,6 @@ a {
   height: 275px;
   border-radius: var(--borderRadius);
   transition: 5ms ease;
-  backface-visibility: hidden;
 }
 
 .card_image .middle img {
@@ -203,10 +202,14 @@ a {
   transform: translate(-50%, -30%);
 }
 
-.card_image:hover {
+.card_image:hover .bg {
   opacity: 0.3;
-  background-image: var(--cyan);
+}
+
+.card_image:hover {
   cursor: pointer;
+  background-color: var(--cyan);
+  border-radius: var(--borderRadius);
 }
 
 .card_image:hover .middle img {
