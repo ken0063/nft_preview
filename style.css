@@ -163,7 +163,7 @@ body {
 main {
   width: 80%;
   font-family: 'Outfit', sans-serif;
-  margin: 90px 25px;
+  margin: 60px 25px;
   padding: 25px;
   background-color: var(--cardBg);
   border-radius: var(--borderRadius);
